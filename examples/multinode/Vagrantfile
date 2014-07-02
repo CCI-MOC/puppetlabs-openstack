@@ -5,7 +5,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "puppetlabs/centos-65-x64-openstack"
+  config.vm.box = "centos64"
 
   config.hostmanager.enabled = true
   config.hostmanager.manage_host = false
@@ -22,7 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     puppet.vm.synced_folder "../../", "/openstack"
 
-    puppet.vm.provider "vmware_fusion" do |v|
+    puppet.vm.provider "libvirt" do |v|
         v.vmx["memsize"] =  "1024"
     end
   end
@@ -37,7 +37,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     control.vm.synced_folder "../../", "/openstack"
 
-    control.vm.provider "vmware_fusion" do |v|
+    control.vm.provider "" do |v|
         v.vmx["memsize"] =  "1024"
     end
   end
@@ -52,7 +52,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     storage.vm.synced_folder "../../", "/openstack"
 
-    storage.vm.provider "vmware_fusion" do |v|
+    storage.vm.provider "libvirt" do |v|
         v.vmx["memsize"] =  "1024"
     end
   end
@@ -67,7 +67,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     network.vm.synced_folder "../../", "/openstack"
 
-    network.vm.provider "vmware_fusion" do |v|
+    network.vm.provider "libvirt" do |v|
         v.vmx["memsize"] =  "1024"
     end
   end
@@ -82,7 +82,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     compute.vm.synced_folder "../../", "/openstack"
 
-    compute.vm.provider "vmware_fusion" do |v|
+    compute.vm.provider "libvirt" do |v|
         v.vmx["memsize"] =  "2048"
     end
   end
@@ -97,7 +97,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     swiftstore1.vm.synced_folder "../../", "/openstack"
 
-    swiftstore1.vm.provider "vmware_fusion" do |v|
+    swiftstore1.vm.provider "libvirt" do |v|
         v.vmx["memsize"] =  "1024"
     end
   end
@@ -112,7 +112,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     swiftstore2.vm.synced_folder "../../", "/openstack"
 
-    swiftstore2.vm.provider "vmware_fusion" do |v|
+    swiftstore2.vm.provider "libvirt" do |v|
         v.vmx["memsize"] =  "1024"
     end
   end
@@ -127,7 +127,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     swiftstore3.vm.synced_folder "../../", "/openstack"
 
-    swiftstore3.vm.provider "vmware_fusion" do |v|
+    swiftstore3.vm.provider "libvirt" do |v|
         v.vmx["memsize"] =  "512"
     end
   end
@@ -142,7 +142,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     tempest.vm.synced_folder "../../", "/openstack"
 
-    tempest.vm.provider "vmware_fusion" do |v|
+    tempest.vm.provider "libvirt" do |v|
       v.vmx["memsize"] = "512"
     end
   end
@@ -155,7 +155,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   # Don't boot with headless mode
   #   vb.gui = true
   #
-  #   # Use VBoxManage to customize the VM. For example to change memory:
+  #   # Use VBoxManage to cusomize the VM. For example to change memory:
   #   vb.customize ["modifyvm", :id, "--memory", "1024"]
   # end
   #

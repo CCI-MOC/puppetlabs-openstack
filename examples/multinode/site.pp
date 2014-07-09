@@ -1,5 +1,6 @@
-node 'puppet' {
-  include ::ntp
+filebucket { 'main':
+	server => '<PUPPET MASTER'S DNS NAME>',
+	path => false,
 }
 
 node 'control.localdomain' {

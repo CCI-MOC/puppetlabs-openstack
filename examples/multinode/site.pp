@@ -1,5 +1,5 @@
 filebucket { 'main':
-	server => '<PUPPET MASTER'S DNS NAME>',
+	server => 'puppet',
 	path => false,
 }
 

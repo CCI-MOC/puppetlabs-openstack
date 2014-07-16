@@ -7,10 +7,10 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "centos64"
 
-  config.hostmanager.enabled = true
+  config.hostmanager.enabled = false
   config.hostmanager.manage_host = false
   config.hostmanager.ignore_private_ip = false
-  config.hostmanager.include_offline = true
+  config.hostmanager.include_offline = false 
 
   config.vm.define "puppet" do |puppet|
     puppet.vm.network :private_network, ip: "192.168.11.3"

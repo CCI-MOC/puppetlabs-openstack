@@ -1,43 +1,42 @@
-filebucket { 'main':
-	server => 'puppet',
-	path => false,
+node 'puppet' {
+  include ::ntp
 }
 
-node 'control.localdomain' {
+node 'control' {
   include ::openstack::role::controller
 }
 
-node 'storage.localdomain' {
+node 'storage' {
   include ::openstack::role::storage
 }
 
-node 'network.localdomain' {
+node 'network' {
   include ::openstack::role::network
 }
 
-node 'compute.localdomain' {
+node 'compute' {
   include ::openstack::role::compute
 }
 
-node 'swiftstore1.localdomain' {
+node 'swiftstore1' {
   class { '::openstack::role::swiftstorage':
     zone => '1'
   }
 }
 
-node 'swiftstore2.localdomain' {
+node 'swiftstore2' {
   class { '::openstack::role::swiftstorage':
     zone => '2'
   }
 }
 
-node 'swiftstore3.localdomain' {
+node 'swiftstore3' {
   class { '::openstack::role::swiftstorage':
     zone => '3'
   }
 }
 
-node 'tempest.localdomain' {
+node 'tempest' {
   include ::openstack::role::tempest
 }
 

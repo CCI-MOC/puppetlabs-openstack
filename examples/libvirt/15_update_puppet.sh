@@ -3,7 +3,7 @@
 # -x flag removes puppet executable from gem without request
 vagrant ssh control -c "sudo rpm -i http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm; \
 			sudo gem uninstall puppet -x; \
-			sudo yum install -y puppet -x; "
+			sudo yum install -y puppet; "
 vagrant ssh storage -c "sudo rpm -i http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm; \
 			sudo gem uninstall puppet -x; \
 			sudo yum install -y puppet; "

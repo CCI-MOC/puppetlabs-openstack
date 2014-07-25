@@ -38,7 +38,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     control.vm.synced_folder "../../", "/openstack"
 
-    control.vm.provider "" do |v|
+    control.vm.provider "libvirt" do |v|
         v.memory = 2048
 	v.nested = true 
     end

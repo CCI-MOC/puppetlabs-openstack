@@ -4,7 +4,7 @@ forge "http://forge.puppetlabs.com"
 
 mod "keystone",
   :git => "git://github.com/stackforge/puppet-keystone",
-  :ref => "master"
+  :ref => "4.1.0"
 
 mod "swift",
   :git => "git://github.com/stackforge/puppet-swift",
@@ -12,27 +12,27 @@ mod "swift",
 
 mod "glance",
   :git => "git://github.com/stackforge/puppet-glance",
-  :ref => "master"
+  :ref => "4.1.0"
 
 mod "cinder",
   :git => "git://github.com/stackforge/puppet-cinder",
-  :ref => "master"
+  :ref => "4.1.0"
 
 mod "neutron",
   :git => "git://github.com/stackforge/puppet-neutron",
-  :ref => "master"
+  :ref => "4.2.0"
 
 mod "nova",
   :git => "git://github.com/stackforge/puppet-nova",
-  :ref => "master"
+  :ref => "4.1.0"
 
 mod "heat",
   :git => "git://github.com/stackforge/puppet-heat",
-  :ref => "master"
+  :ref => "4.1.0"
 
 mod "ceilometer",
   :git => "git://github.com/stackforge/puppet-ceilometer",
-  :ref => "master"
+  :ref => "4.1.0"
 
 mod "horizon",
   :git => "git://github.com/stackforge/puppet-horizon",
@@ -52,7 +52,7 @@ mod "vswitch",
 
 mod "apache",
   :git => "git://github.com/puppetlabs/puppetlabs-apache",
-  :ref => "master"
+  :ref => "1.1.1"
 
 mod "inifile",
   :git => "git://github.com/puppetlabs/puppetlabs-inifile",
